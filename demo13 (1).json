@@ -1,0 +1,30 @@
+{
+"AWSTemplateFormatVersion" : "2010-09-09",
+"Description" : "Multiple EC2 instances",
+"Resources" : {
+
+"MyEc2Instance1" : {
+"Type" : "AWS::EC2::Instance",
+"Properties" : {
+"ImageId" : "ami-0e472ba40eb589f49",
+"KeyName" : "cloudNV",
+"InstanceType" : "t2.micro",
+"SecurityGroupIds" : ["sg-09a07d5caffc24b7a"],
+"SubnetId" : "subnet-0c11f931558d53a91",
+"Tags" : [ {"Key" : "Name", "Value" :"Ubuntu Server 18.04"} ]
+}
+},
+"MyEc2Instance2" : {
+"Type" : "AWS::EC2::Instance",
+"Properties" : {
+"ImageId" : "ami-038b3df3312ddf25d",
+"KeyName" : "cloudNV",
+"InstanceType" : "t2.micro",
+"SecurityGroupIds" : ["sg-09a07d5caffc24b7a"],
+"SubnetId" : "subnet-0c11f931558d53a91",
+"Tags" : [ {"Key" : "Name", "Value" :"Amazon Linux 2"} ]
+}
+
+}
+}
+}
